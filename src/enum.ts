@@ -1,0 +1,17 @@
+// set of fixed string
+
+// type UserRole = 'admin' | 'moderator' | 'user';
+enum UserRole {
+    Admin = "Admin",
+    Editor = "Editor",
+    Viewer = "Viewer",
+}
+
+const canEdit = (role: UserRole) => {
+    if (role === UserRole.Admin || role === UserRole.Editor) {
+        return true;
+    } else return false;
+}
+
+const editParmition = canEdit(UserRole.Admin);
+console.log(editParmition);
